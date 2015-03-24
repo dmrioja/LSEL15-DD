@@ -53,13 +53,14 @@ int timer = 0;
 
 
 /* MONEDERO INPUT FUNCTIONS */
-int checkMoneda(fsm_t *this) {
+int checkCuenta(fsm_t *this) {
 	if (moneda != 0) {
 		cuenta += moneda;
 		moneda = 0;
 		return 1;
+	} else {
+		return 0;
 	}
-	return 0;
 }
 
 int checkBotonDevolver(fsm_t *this) {
@@ -99,8 +100,8 @@ int checkTimer(fsm_t *this) {
 }
 
 /* INPUT FUNCTIONS COLECTION */
-int (*inputsMonedero[4])() = {checkMoneda, checkBotonDevolver, checkBotonCafe, checkFin};
-int (*inputsMaqCafe[3])() = {checkFin, checkNoFin, checkTimer};
+int (*inputsMonedero[4])(fsm_t *this) = {checkCuenta, checkBotonDevolver, checkBotonCafe, checkFin};
+int (*inputsMaqCafe[3])(fsm_t *this) = {checkFin, checkNoFin, checkTimer};
 
 
 
@@ -152,10 +153,10 @@ main(void){
 	fsm_trans_t tt_monedero[] = {
 		{REPOSO, inputsMonedero[0], REPOSO , outputsMonedero[2]} , 
 		{REPOSO,  inputsMonedero[1], REPOSO , outputsMonedero[0]} ,  
-		{REPOSO,  inputsMonedero[2], SIRVIENDO ,outputsMonedero[1] } ,/*hay que avisar de que hemos cambiado de estado a sirviendo+*/
+		{REPOSO,  inputsMonedero[2], SIRVIENDO ,outputsMonedero[1] } ,
 		{SIRVIENDO, inputsMonedero[3], REPOSO , outputsMonedero[0]} ,
-	};
-	
+		};
+
 	fsm_trans_t tt_maqcafe[] = {  
 		{IDLE, inputsMaqCafe[0], IDLE , outputsMaqCafe[2]} ,  
 		{IDLE, inputsMaqCafe[1], VASO , outputsMaqCafe[1]} ,  
@@ -180,15 +181,13 @@ main(void){
 		printf( "No se puede abrir el fichero.\n" );
 		exit( 1 );
 	}*/
-printf("1");
+
 	while (scanf("%d %d %d", &moneda, &botonCafe, &botonDevolver) == 3) {
-		printf("2");
-		fsm_run(maqcafe);
-printf("3");
+		printf("Moneda %d ",moneda);
+		printf("Cuenta %d ",cuenta);
 		fsm_run(monedero);
-printf("4");
+		//	fsm_run(maqcafe);
 	}
-printf("5");
 	
 	/*printf( "\nContenido del fichero:\n" );
 	fgets(textEstim,100,estimulos);
