@@ -66,20 +66,26 @@ int checkCuenta(fsm_t *this) {
 int checkBotonDevolver(fsm_t *this) {
 	if (botonDevolver != 0) {
 		return 1;
+	} else {
+		return 0;
 	}
-	return 0;
 }
 
 int checkBotonCafe(fsm_t *this) {
 	if((botonCafe != 0) && (cuenta >= 50)) {
 		cuenta -= 50;
 		return 1;
+	} else {
+		return 0;
 	}
-	return 0;
 }
 
 int checkFin(fsm_t *this) {
-	return fin;
+	if (fin == 1) {
+		return 1;
+	} else {
+		return 0;
+	}
 }
 
 int checkNoFin(fsm_t *this){
@@ -153,9 +159,10 @@ main(void){
 	fsm_trans_t tt_monedero[] = {
 		{REPOSO, inputsMonedero[0], REPOSO , outputsMonedero[2]} , 
 		{REPOSO,  inputsMonedero[1], REPOSO , outputsMonedero[0]} ,  
-		{REPOSO,  inputsMonedero[2], SIRVIENDO ,outputsMonedero[1] } ,
+		{REPOSO,  inputsMonedero[2], SIRVIENDO , outputsMonedero[1] } ,
 		{SIRVIENDO, inputsMonedero[3], REPOSO , outputsMonedero[0]} ,
-		};
+		{-1, NULL, -1, NULL} ,
+	};
 
 	fsm_trans_t tt_maqcafe[] = {  
 		{IDLE, inputsMaqCafe[0], IDLE , outputsMaqCafe[2]} ,  
@@ -166,47 +173,28 @@ main(void){
 		{CAFE, inputsMaqCafe[2], LECHE , outputsMaqCafe[1]} ,  
 		{LECHE, inputsMaqCafe[2], PITIDO , outputsMaqCafe[1]} , 
 		{PITIDO, inputsMaqCafe[2], IDLE , outputsMaqCafe[0]} ,
+		{-1, NULL, -1, NULL} ,
 	};	
-	
 	
 	fsm_t *monedero = fsm_new(tt_monedero);
 	fsm_t *maqcafe = fsm_new(tt_maqcafe);
-	
-/*
-	FILE *estimulos;
-	char textEstim[100];
-	 Lectura fichero de estímulos 
-	estimulos = fopen("test.txt","r");
-	if (estimulos == NULL) {
-		printf( "No se puede abrir el fichero.\n" );
-		exit( 1 );
-	}*/
 
+	monedero->current_state = 0;
+	int i = 0;
 	while (scanf("%d %d %d", &moneda, &botonCafe, &botonDevolver) == 3) {
-		printf("Moneda %d ",moneda);
-		printf("Cuenta %d ",cuenta);
+		printf("\n>>>>>> Mon: %d ",moneda);
+		printf("Cafe: %d ", botonCafe);
+		printf("Devol: %d ", botonDevolver);
+		printf("Cuenta: %d ",cuenta);
+		i++;
+		if (i > 40) {
+			fin = 1;
+			
+		}
 		fsm_run(monedero);
-		//	fsm_run(maqcafe);
+		//fsm_run(maqcafe);
 	}
-	
-	/*printf( "\nContenido del fichero:\n" );
-	fgets(textEstim,100,estimulos);
-	while (feof(estimulos) == 0) {
-		printf( "%s",textEstim );
-		fgets(textEstim,100,estimulos);
 
-
-		
-		fsm_run(p_monedero);
-		  fsm_run(p_maqcafe);
-		  delay until next action
-		
-	}
-	
-	if (fclose(estimulos) != 0) {
-		printf( "Problemas al cerrar el fichero\n" );
-	}*/
-	
 	printf("\n\nFin de ejecución");
 	return 0;
 }

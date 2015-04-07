@@ -35,13 +35,12 @@ void
 fsm_run (fsm_t *this) {
   fsm_trans_t *t;
 	t = this->tt;
-	int din = t->input(this);
-	printf("- Din. Suf. %d ", din);
-	printf("- Boton %d ", (t+2)->input(this));
-	int i = 0;
-	int MAXREC = sizeof(this->tt);
- 	for (t = this->tt; i < 4; i++) {
-		t++;
+	int estado = this->current_state;
+	printf("- Estado %d ", estado);
+	printf("FIN: %d ", (t+3)->input(this));
+	//printf("- Boton %d ", (t+2)->input(this));
+ 	for (t = this->tt; t->last_state >= 0; ++t) {
+	  //printf("\n%d - %d - ",this->current_state,t->last_state);
 		if ((this->current_state == t->last_state) && t->input(this)) {
 			this->current_state = t->next_state;
 			printf("- Salto de estado -");
@@ -49,12 +48,7 @@ fsm_run (fsm_t *this) {
 				t->output(this);
 			break;
 		}
-		i++;
-		if (i==MAXREC){
-			break;
-		}
 	}
-	printf("\n %d pasadas en el for. ",i);
 }
 
 
