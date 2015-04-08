@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include "fsm.h"
 
+
 /* Constructor function */
 fsm_t*
 fsm_new (fsm_trans_t *tt) {
@@ -36,19 +37,15 @@ fsm_run (fsm_t *this) {
   fsm_trans_t *t;
 	t = this->tt;
 	int estado = this->current_state;
-	printf("- Estado %d ", estado);
-	printf("FIN: %d ", (t+3)->input(this));
-	//printf("- Boton %d ", (t+2)->input(this));
- 	for (t = this->tt; t->last_state >= 0; ++t) {
-	  //printf("\n%d - %d - ",this->current_state,t->last_state);
+	for (t = this->tt; t->last_state >= 0; ++t) {
 		if ((this->current_state == t->last_state) && t->input(this)) {
 			this->current_state = t->next_state;
-			printf("- Salto de estado -");
+			if (t->last_state != t->next_state) {
+				printf(" ** Cambio de estado **");
+			}
 			if (t->output)
 				t->output(this);
 			break;
 		}
 	}
 }
-
-

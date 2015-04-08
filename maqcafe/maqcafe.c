@@ -32,12 +32,12 @@
 #define PITIDO 6
 
 /* MAQCAFE TIMERS */
-#define VASO_TIMER 10
-#define CUCHARA_TIMER 10
-#define AZUCAR_TIMER 10
-#define CAFE_TIMER 10
-#define LECHE_TIMER 10
-#define PITIDO_TIMER 10
+#define VASO_TIMER 3
+#define CUCHARA_TIMER 4
+#define AZUCAR_TIMER 5
+#define CAFE_TIMER 6
+#define LECHE_TIMER 7
+#define PITIDO_TIMER 8
 
 int timers[6] = {VASO_TIMER, CUCHARA_TIMER, AZUCAR_TIMER,
 		 CAFE_TIMER, LECHE_TIMER, PITIDO_TIMER};
@@ -75,28 +75,29 @@ int checkBotonCafe(fsm_t *this) {
 	if((botonCafe != 0) && (cuenta >= 50)) {
 		cuenta -= 50;
 		return 1;
-	} else {
-		return 0;
-	}
+	} 
+	return 0;
 }
 
 int checkFin(fsm_t *this) {
 	if (fin == 1) {
 		return 1;
-	} else {
-		return 0;
 	}
+	return 0;
 }
 
 int checkNoFin(fsm_t *this){
-	return !fin;
+	if (fin == 0) {
+		return 1;
+	}	
+	return 0;
 }
 
 /* MAQCAFE INPUT FUNCTIONS */
 
 
 int checkTimer(fsm_t *this) {
-	if(timer == 0) {
+	if((timer-1) <= 0) {
 		return 1;
 	}
 	else {
@@ -114,7 +115,7 @@ int (*inputsMaqCafe[3])(fsm_t *this) = {checkFin, checkNoFin, checkTimer};
 /* OUTPUT SIGNAL GENERATIONS */
 
 void doDevolver(fsm_t *this) {
-	printf("\nDevolución: %d céntimos", cuenta);
+	printf(" ++ Cambio %d cént ++", cuenta);
 	cuenta = 0;
 }
 
@@ -161,6 +162,7 @@ main(void){
 		{REPOSO,  inputsMonedero[1], REPOSO , outputsMonedero[0]} ,  
 		{REPOSO,  inputsMonedero[2], SIRVIENDO , outputsMonedero[1] } ,
 		{SIRVIENDO, inputsMonedero[3], REPOSO , outputsMonedero[0]} ,
+		{SIRVIENDO, inputsMonedero[0], SIRVIENDO , outputsMonedero[2]} ,
 		{-1, NULL, -1, NULL} ,
 	};
 
@@ -182,19 +184,22 @@ main(void){
 	monedero->current_state = 0;
 	int i = 0;
 	while (scanf("%d %d %d", &moneda, &botonCafe, &botonDevolver) == 3) {
-		printf("\n>>>>>> Mon: %d ",moneda);
-		printf("Cafe: %d ", botonCafe);
-		printf("Devol: %d ", botonDevolver);
-		printf("Cuenta: %d ",cuenta);
-		i++;
-		if (i > 40) {
-			fin = 1;
-			
-		}
-		fsm_run(monedero);
-		//fsm_run(maqcafe);
-	}
+		/* INTERFAZ */
+		printf("\n>>> Mon: %d ",moneda);
+		printf("Caf: %d ", botonCafe);
+		printf("Dev: %d ", botonDevolver);
+		printf("Cue: %d ",cuenta);
+		printf("Fin: %d",fin);		
+		printf("Est1: %d ",monedero->current_state);
+		printf("Est2: %d ",maqcafe->current_state);
+		
+		/* EJECUCION DE LAS FSM */
 
+		fsm_run(monedero);
+		fsm_run(maqcafe);
+		
+		
+	}
 	printf("\n\nFin de ejecución");
 	return 0;
 }
