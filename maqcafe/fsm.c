@@ -18,22 +18,19 @@
 
 
 /* Constructor function */
-fsm_t*
-fsm_new (fsm_trans_t *tt) {
+fsm_t* fsm_new (fsm_trans_t *tt) {
 	fsm_t *this = (fsm_t*) malloc (sizeof (fsm_t));
 	fsm_init (this, tt);
 	return this;
 }
 
 /* Initialization function */
-void
-fsm_init (fsm_t *this, fsm_trans_t *tt) {
+void fsm_init (fsm_t *this, fsm_trans_t *tt) {
 	this->tt = tt;
 }
 
 /* FSM execution function */
-void
-fsm_run (fsm_t *this) {
+void fsm_run (fsm_t *this) {
   fsm_trans_t *t;
 	t = this->tt;
 	int estado = this->current_state;

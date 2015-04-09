@@ -31,13 +31,13 @@ typedef struct fsm_trans_t {
 /* FSM definition struct */
 struct fsm_t {
 	int current_state;
-	fsm_trans_t* tt;
+	fsm_trans_t *tt;
 };
 
 /* FSM functions*/
-fsm_t* fsm_new (fsm_trans_t* tt);
-void fsm_init (fsm_t* this, fsm_trans_t* tt);
-void fsm_run (fsm_t* this);
+fsm_t *fsm_new (fsm_trans_t *tt);
+void fsm_init (fsm_t *this, fsm_trans_t *tt);
+void fsm_run (fsm_t *this);
 
 #endif
 
