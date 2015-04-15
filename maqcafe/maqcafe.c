@@ -11,10 +11,13 @@
 | 05-03-15 Diego           Modified functions
 |
 ===================================================================*/
-
+#include <sys/select.h>
+#include <sys/time.h>
+#include <time.h>
+#include <signal.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include "fsm.h"
 
 /* Definir aquí flags para el modo DEBUG */ 
@@ -50,7 +53,7 @@ int botonCafe = 0;
 int fin = 0;
 int cuenta = 0;
 int timer = 0;
-struct timespec tim;
+struct timespec tim = {0, 100000000};
 
 
 /* MONEDERO INPUT FUNCTIONS */
@@ -100,7 +103,7 @@ static int checkTimer(fsm_t *this) {
 		return 1;
 	}
 	else {
-		/* nanosleep(&tim, NULL);*/
+		nanosleep(&tim, NULL);
 		timer--;
 		return 0;
 	}
@@ -137,16 +140,14 @@ static void doNothing(fsm_t *this) {
 
 /* TIME CALC FUNCTIONS */
 
-/* long diff(struct timespec *start, struct timespec *end) { */
-/*         struct timespec *temp; */
-/*         if ((end.tv_nsec - start.tv_nsec) < 0) { */
-/* 		temp.tv_nsec = 1000000000 + end.tv_nsec - start.tv_nsec; */
-/* 	}  */
-/* 	else { */
-/* 		temp.tv_nsec = end.tv_nsec - start.tv_nsec; */
-/*         } */
-/*         return temp.tv_nsec; */
-/* } */
+void diff(struct timespec *start, struct timespec *end, struct timespec *sub) {
+	if ((end->tv_nsec - start->tv_nsec) < 0) {
+		sub->tv_nsec = 1000000000 + end->tv_nsec - start->tv_nsec;
+	}
+	else {
+		sub->tv_nsec = end->tv_nsec - start->tv_nsec;
+        }
+}
 
 /* EXECUTION OF MAQUINA CAFE FSM */
 
@@ -174,11 +175,11 @@ static fsm_trans_t tt_maqcafe[] = {
 int main(void){
 
 	/* TIME VARIABLES */
-
-	struct timespec *t1, *t2, *t3;
-	long task1, task2;
+	struct timespec clk_period = { 0, 100 * 1000000 };
+	struct timespec next_activation = {0,0};
+	struct timespec t1,t2,t3,task1,task2 = {0,0};
 	long maxTask1, maxTask2;
-	task1 = task2 = maxTask1 = maxTask2 = 0;
+	maxTask1 = maxTask2 = 0;
 	/* tim.tv_sec = 0; */
 	/* tim.tv_nsec = 10000000;  */
 	/* 10 ms */
@@ -195,6 +196,9 @@ int main(void){
 	fsm_t *maqcafe = fsm_new(tt_maqcafe);
 
 	monedero->current_state = 0;
+	maqcafe->current_state = 0;
+	
+	clock_gettime(CLOCK_MONOTONIC,&next_activation);
 	
 	while (scanf("%d %d %d", &moneda, &botonCafe, &botonDevolver) == 3) {
 		/* INTERFAZ */
@@ -206,22 +210,26 @@ int main(void){
 		printf("Est1: %d ",monedero->current_state);
 		printf("Est2: %d ",maqcafe->current_state);
 		
-		/* EJECUCION DE LAS FSM */
-		/* clock_gettime(CLOCK_MONOTONIC, t1); */
+		/*  */
+
+/* EJECUCION DE LAS FSM */
+		
+
+		clock_gettime(CLOCK_MONOTONIC, &t1);
 		fsm_run(monedero);
-		/* clock_gettime(CLOCK_MONOTONIC, t2); */
+		clock_gettime(CLOCK_MONOTONIC, &t2);
 		fsm_run(maqcafe);
-		/* clock_gettime(CLOCK_MONOTONIC, t3); */
+		clock_gettime(CLOCK_MONOTONIC, &t3);
 
-		/* task1 = diff(t1,t2); */
-		/* task2 = diff(t2,t3); */
+		diff(&t1,&t2,&task1);
+		diff(&t2,&t3,&task2);
 
-		if(task1 > maxTask1){
-			maxTask1 = task1;
+		if(task1.tv_nsec > maxTask1){
+			maxTask1 = task1.tv_nsec;
 		}
 
-		if(task2 > maxTask2){
-			maxTask2 = task2;
+		if(task2.tv_nsec > maxTask2){
+			maxTask2 = task2.tv_nsec;
 		}
 		
 	}

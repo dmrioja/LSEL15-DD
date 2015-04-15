@@ -3,10 +3,10 @@ ARCH=$(shell uname -m)
 
 ifeq ($(ARCH), armv6l)
 CFLAGS= -Wall -D_GNU_SOURCE -std=c99 -pedantic -g -O $(shell xeno-config --skin posix --cflags)
-LDLIBS=  $(shell xeno-config --skin posix --ldflags)
+LDFLAGS=  $(shell xeno-config --skin posix --ldflags)
 else
 CFLAGS= -Wall -D_GNU_SOURCE -std=c99 -pedantic -g -O
-LDLIBS= -lpthread -lrt
+LDFLAGS= -lpthread -lrt
 endif
 
 maqcafe: maqcafe.o fsm.o
