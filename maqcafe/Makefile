@@ -2,12 +2,16 @@ CC=gcc
 ARCH=$(shell uname -m)
 
 ifeq ($(ARCH), armv6l)
-CFLAGS= -Wall -D_GNU_SOURCE -std=c99 -pedantic -g -O $(shell xeno-config --skin posix --cflags)
+CFLAGS= -Wall -D_GNU_SOURCE -std=c99 -pedantic -g -O $(shell xeno-config --skin posix --cflags) $(DEBUG)
 LDLIBS=  $(shell xeno-config --skin posix --ldflags)
 else
-CFLAGS= -Wall -D_GNU_SOURCE -std=c99 -pedantic -g -O
+CFLAGS= -Wall -D_GNU_SOURCE -std=c99 -pedantic -g -O $(DEBUG)
 LDLIBS= -lpthread -lrt
 endif
+
+# debug options
+#DEBUG='-DDEBUG(x)=x' 
+DEBUG= 
 
 maqcafe: maqcafe.o fsm.o
 
