@@ -8,9 +8,10 @@ OBJ1 = maqcafe.o fsm.o
 SRC2 = maqcafe_time.c fsm.c fsm.h
 OBJ2 = maqcafe_time.o fsm.o
 
-all: $(OBJ1) maqcafe_time
+all: $(OBJ1) $(OBJ2)
 ifeq ($(ARCH), armv6l)
 	$(CC) $(xeno-config --skin posix --cflags --ldflags) -o maqcafe $(OBJ1) $(LDFLAGS)
+	$(CC) $(xeno-config --skin posix --cflags --ldflags) -o maqcafe_time $(OBJ2) $(LDFLAGS)
 else
 	$(CC) $(CFLAGS) -c $(SRC1)
 	$(CC) $(CFLAGS) $(OBJ1) $(LDFLAGS) -o maqcafe
@@ -19,7 +20,7 @@ endif
 clean:
 	$(RM) $(OBJ1) $(OBJ2) maqcafe maqcafe_time
 
-test: maqcafe
+test: all
 	./maqcafe < test/mcafe.input > test/mcafe.output
 
 maqcafe_time: $(OBJ2)

@@ -112,7 +112,7 @@ static int checkTimer(fsm_t *this) {
 /* OUTPUT SIGNAL GENERATIONS */
 
 static void doDevolver(fsm_t *this) {
-  /*printf(" ++ Cambio %d cént ++", cuenta);*/
+  printf(" >> Cambio %d cent ", cuenta);
 	cuenta = 0;
 }
 
