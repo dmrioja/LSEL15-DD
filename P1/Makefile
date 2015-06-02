@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -lpthread -lrt -Wall -D_GNU_SOURCE -ansi -std=c99 -pedantic -g -O 
+CFLAGS= -lpthread -lrt -Wall -Werror -ansi -std=c99 -pedantic -g -O 
 #LFLAGS=-lrt
 
 maqcafe: maqcafe.o fsm.o
