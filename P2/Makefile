@@ -2,21 +2,22 @@ CC=gcc
 ARCH=$(shell uname -m)
 
 CFLAGS = -g -O -Wall -D_GNU_SOURCE -std=c99 -pedantic
-LDFLAGS= -lrt
+LDFLAGS= -lrt -lpthread
 SRC1 = maqcafe.c fsm.c fsm.h
 OBJ1 = maqcafe.o fsm.o
 SRC2 = maqcafe_time.c fsm.c fsm.h
 OBJ2 = maqcafe_time.o fsm.o
 
-all: $(OBJ)
+all: $(OBJ1)
 ifeq ($(ARCH), armv6l)
 	$(CC) $(xeno-config --skin posix --cflags --ldflags) -o maqcafe $(OBJ1) $(LDFLAGS)
 else
-	LDLIBS= -lpthread -lrt
+	$(CC) $(CFLAGS) -c $(SRC1)
+	$(CC) $(CFLAGS) $(OBJ1) $(LDFLAGS) -o maqcafe
 endif
 
 clean:
-	$(RM) $(OBJ) maqcafe maqcafe_time
+	$(RM) $(OBJ1) $(OBJ2) maqcafe maqcafe_time
 
 test: maqcafe
 	./maqcafe < test2/mcafe.input > test2/mcafe.output
