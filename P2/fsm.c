@@ -33,13 +33,9 @@ void fsm_init (fsm_t *this, fsm_trans_t *tt) {
 void fsm_run (fsm_t *this) {
   fsm_trans_t *t;
 	t = this->tt;
-	int estado = this->current_state;
 	for (t = this->tt; t->last_state >= 0; ++t) {
 		if ((this->current_state == t->last_state) && t->input(this)) {
 			this->current_state = t->next_state;
-			if (t->last_state != t->next_state) {
-				printf(" ** Cambio de estado **");
-			}
 			if (t->output)
 				t->output(this);
 			break;

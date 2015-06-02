@@ -50,7 +50,7 @@ int botonCafe = 0;
 int fin = 0;
 int cuenta = 0;
 int timer = 0;
-struct timespec tim;
+/*struct timespec tim;*/
 
 
 /* MONEDERO INPUT FUNCTIONS */
@@ -175,7 +175,7 @@ int main(void){
 
 	/* TIME VARIABLES */
 
-	struct timespec *t1, *t2, *t3;
+	/*struct timespec *t1, *t2, *t3;*/
 	long task1, task2;
 	long maxTask1, maxTask2;
 	task1 = task2 = maxTask1 = maxTask2 = 0;

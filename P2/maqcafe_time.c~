@@ -1,13 +1,14 @@
 /*=================================================================
 | Archivo: maqcafe.c
-| Propósito: Implementación de una máquina de café (EJECUTIVO CICLICO)
+| Propósito: Implementación de una máquina de café
 | Documentación: -
 |
 | Revisiones:
 | Fecha    Nombre          Revisión
 | -------- --------------- ----------------------------------------
-| 01-04-15 Dani y Diego    Created
-| 25-05-15 Diego           Last release
+| 26-02-15 Dani y Diego    Created
+| 03-03-15 Diego           Add lectura fichero
+| 05-03-15 Diego           Modified functions
 |
 ===================================================================*/
 #include <sys/select.h>
@@ -189,10 +190,10 @@ int main(void){
 	/* TIME VARIABLES */
 	struct timespec period = { 0, 100 * 1000000 };
 	struct timespec next_activation = {0,0};
-	/*struct timespec t1,t2,t3,task1,task2 = {0,0};
+	struct timespec t1,t2,t3,task1,task2 = {0,0};
 	long maxTask1 = 0;
 	long maxTask2 = 0;
-	*/
+	
 	/* INIT VARIABLES */
 	
 	moneda = 0;
@@ -213,21 +214,27 @@ int main(void){
 	int phase = 0;
 	while (scanf("%d %d %d", &moneda, &botonCafe, &botonDevolver) == 3) {
 	  /* INTERFAZ */
-	  printf("\n>>> Mon: %d - Caf: %d - Dev: %d - Cue: %d - Fin: %d - Est1: %d - Est2: %d ", moneda, botonCafe, botonDevolver, cuenta, fin, monedero->current_state, maqcafe->current_state);
-	  
+	  /*printf("\n>>> Mon: %d ", moneda);
+	  printf("Caf: %d ", botonCafe);
+	  printf("Dev: %d ", botonDevolver);
+	  printf("Cue: %d ", cuenta);
+	  printf("Fin: %d", fin);
+	  printf("Est1: %d ", monedero->current_state);
+	  printf("Est2: %d ", maqcafe->current_state);
+	  */
 	  /* EJECUTIVO CICLICO DE LAS FSM */
 	  switch(phase) {
 	  case 0:
 	    
-	    /*clock_gettime(CLOCK_MONOTONIC, &t1);*/
+	    clock_gettime(CLOCK_MONOTONIC, &t1);
 	    fsm_run(monedero);
-	    /*clock_gettime(CLOCK_MONOTONIC, &t2);*/
+	    clock_gettime(CLOCK_MONOTONIC, &t2);
 	    fsm_run(maqcafe);
-	    /*clock_gettime(CLOCK_MONOTONIC, &t3);*/
+	    clock_gettime(CLOCK_MONOTONIC, &t3);
 	    
-	    /*time_sub(&t1,&t2,&task1);*/
-	    /*time_sub(&t2,&t3,&task2);*/
-	    /*
+	    time_sub(&t1,&t2,&task1);
+	    time_sub(&t2,&t3,&task2);
+	    
 	    if(task1.tv_nsec > maxTask1){
 	      maxTask1 = task1.tv_nsec;
 	    }
@@ -235,19 +242,21 @@ int main(void){
 	    if(task2.tv_nsec > maxTask2){
 	      maxTask2 = task2.tv_nsec;
 	    }
-	    */
+	    
 	  default:
 	    phase = (phase + 1) % Nphases;
 	  }
 	  clock_gettime(CLOCK_MONOTONIC,&next_activation);
 	  time_add(&next_activation, &period, &next_activation);
-	  delay_until(&next_activation);
-	}
-	/*
-	  printf("\nTIEMPOS:\n");
-	  printf("MaxTime Monedero: %ld \n", maxTask1);
-	  printf("MaxTime MaqCafe: %ld \n", maxTask2);
-	*/
+	  /*printf("DORMIR -- Segundos %d", next_activation.tv_sec);
+	    printf("Nanos %d \n", next_activation.tv_nsec);*/
+	  /*delay_until(&next_activation);*/
+	  /*printf("DESP -- Segundos %d", next_activation.tv_sec);
+	  printf("Nanos %d \n", next_activation.tv_nsec);
+	  */}
+	printf("\nTIEMPOS:\n");
+	printf("MaxTime Monedero: %ld \n", maxTask1);
+	printf("MaxTime MaqCafe: %ld \n", maxTask2);
 	printf("**********  Fin de ejecucion  **********\n");
 	return 0;
 	
