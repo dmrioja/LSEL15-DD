@@ -44,8 +44,8 @@
 /* TIME REQUIREMENTS */
 #define PER_MON 100
 #define DLINE_MON 100
-#define PER_MAQ 200
-#define DLINE_MAQ 200
+#define PER_MAQ 100
+#define DLINE_MAQ 100
 #define STACKSIZE 1024
 
 int timers[6] = {VASO_TIMER, CUCHARA_TIMER, AZUCAR_TIMER,
@@ -132,13 +132,9 @@ static int checkNoFin(fsm_t *this){
 /* MAQCAFE INPUT FUNCTIONS */
 
 static int checkTimer(fsm_t *this) {
-	if((timer-1) <= 0) {
-		return 1;
-	}
-	else {
-		timer--;
-		return 0;
-	}
+	
+	return timer;
+
 }
 
 /* OUTPUT SIGNAL GENERATIONS */
@@ -165,6 +161,7 @@ static void finOff(fsm_t *this) {
 static void restartTimer(fsm_t *this){
 /* El primer estado en el que se usa el timer es 1, 
    el array comienza en 0 */
+	timer = 0;
 	timer_run(timers[this->current_state-1]);
 }
 
@@ -231,10 +228,12 @@ static void *task_monedero(void *arg) {
 	monedero->current_state = REPOSO;
 	clock_gettime(CLOCK_MONOTONIC, &next_activation);
 	while(scanf("%d %d %d", &moneda, &botonCafe, &botonDevolver) == 3) {
-		printf("\n>>> Mon: %d - Caf: %d - Dev: %d - Cue: %d - Fin: %d - Est1: %d ", moneda, botonCafe, botonDevolver, cuenta, fin, monedero->current_state);
 		fsm_run(monedero);
 		time_add(&next_activation, period, &next_activation);
 		delay_until(&next_activation);
+		pthread_mutex_lock(&cerrojo_fin);
+		printf("\n>>> Mon: %d - Caf: %d - Dev: %d - Cue: %d - Fin: %d - Est1: %d ", moneda, botonCafe, botonDevolver, cuenta, fin, monedero->current_state);
+                pthread_mutex_unlock(&cerrojo_fin);
 	}
 }
 
@@ -247,10 +246,12 @@ static void *task_maqcafe(void *arg) {
 	maqcafe->current_state = IDLE;
 	clock_gettime(CLOCK_MONOTONIC, &next_activation);
 	while(1) {
-	  	printf("\n>>> Est2: %d ", maqcafe->current_state);
 		fsm_run(maqcafe);
 		time_add(&next_activation, period, &next_activation);
 		delay_until(&next_activation);
+		pthread_mutex_lock(&cerrojo_fin);
+		printf("\n>>> Est2: %d - Fin: %d ", maqcafe->current_state, fin);
+		pthread_mutex_unlock(&cerrojo_fin);
 		pthread_mutex_lock(&cerrojo_endTest);
 		if(endTest == 1) {
 			break;

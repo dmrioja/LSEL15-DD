@@ -1,147 +1,464 @@
 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 20 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 30 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 10 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 50 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 20 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 1 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 80 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 0 
+>>> Mon: 0 - Caf: 1 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 1 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
->>> Est2: 0 
+>>> Est2: 1 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 1 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 1 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
->>> Est2: 1 
+>>> Est2: 1 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 1 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
->>> Est2: 2 
->>> Mon: 30 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
->>> Est2: 3 
+>>> Est2: 1 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 1 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 1 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 2 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 3 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 3 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 3 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 3 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 30 - Fin: 0 - Est1: 1 
+>>> Est2: 3 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 4 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
->>> Est2: 4 
+>>> Est2: 5 - Fin: 0 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 5 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 6 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
->>> Est2: 5 
+>>> Est2: 6 - Fin: 0 
+>>> Est2: 6 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 6 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
->>> Est2: 6 
+>>> Est2: 6 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 6 - Fin: 0 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 0 - Est1: 1 
+>>> Est2: 6 - Fin: 0 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 60 - Fin: 1 - Est1: 1  >> Cambio 60 cent 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 20 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 1 - Cue: 20 - Fin: 1 - Est1: 0  >> Cambio 20 cent 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 20 - Fin: 1 - Est1: 0  >> Cambio 20 cent 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 1 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
 >>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
->>> Est2: 0 
->>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 **********  Fin de ejecucion  **********
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 
+>>> Mon: 0 - Caf: 0 - Dev: 0 - Cue: 0 - Fin: 1 - Est1: 0 
+>>> Est2: 0 - Fin: 1 **********  Fin de ejecucion  **********
