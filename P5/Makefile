@@ -3,8 +3,8 @@ ARCH=$(shell uname -m)
 
 CFLAGS = -g -O -Wall -D_GNU_SOURCE -std=c99
 LDFLAGS= -lrt -lpthread
-SRC1 = main.c fsm.c task.c fsm.h
-OBJ1 = main.o fsm.o
+SRC1 = main.c fsm.c task.c wiringPi.c fsm.h task.h wiringPi.h
+OBJ1 = main.o fsm.o task.o wiringPi.o
 
 all: $(OBJ1)
 ifeq ($(ARCH), armv6l)
@@ -15,12 +15,12 @@ else
 endif
 
 clean:
-	$(RM) $(OBJ1) $(OBJ2) main
+	$(RM) $(OBJ1) main
 
 test: all
 	./main < test/reloj.input > test/reloj.output
 
 debug: test
-	gdb ./maqcafe < test/mcafe.input > test/mcafe.output
+	gdb ./main < test/reloj.input > test/reloj.output
 
 .PHONY: test debug clean 
