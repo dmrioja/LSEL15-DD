@@ -4,7 +4,7 @@
 #include <sys/select.h>
 #include <termios.h>
 #include "screen.h"
-#include "tasks.h"
+#include "task.h"
 
 static
 void*
@@ -72,7 +72,7 @@ screen_setup (int prio, int col, int lin)
   newtc.c_lflag |= ECHO;
   tcsetattr(0, TCSANOW, &newtc);
 
-  /*t_screen = task_new ("screen", refresh_screen, 500, 500, 1, 1024);*/
+  //t_screen = task_new ("screen", refresh_screen, 500, 500, 1, 1024);
 }
 
 void

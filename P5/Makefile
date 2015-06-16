@@ -3,8 +3,8 @@ ARCH=$(shell uname -m)
 
 CFLAGS = -g -O -Wall -D_GNU_SOURCE -std=c99
 LDFLAGS= -lrt -lpthread
-SRC1 = main.c fsm.c task.c wiringPi.c fsm.h task.h wiringPi.h
-OBJ1 = main.o fsm.o task.o wiringPi.o
+SRC1 = main.c fsm.c task.c screen.c wiringPi.c fsm.h task.h wiringPi.h
+OBJ1 = main.o fsm.o task.o screen.o wiringPi.o
 
 all: $(OBJ1)
 ifeq ($(ARCH), armv6l)
