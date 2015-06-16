@@ -20,6 +20,7 @@
 #include "fsm.h"
 #include "task.h"
 #include "wiringPi.h"
+#include <pthread.h>
 
 #define NUMLEDS 8
 /* FSM LEDSHOW STATES */
@@ -31,8 +32,8 @@
 #define WAIT_ISR 5 /* Wait for the interruption from the infrared line. */
 
 /* TIME REQUIREMENTS */
-#define PER 100
-#define DLINE 100
+#define PER 1500
+#define DLINE 1500
 #define STACKSIZE 1024
 #define IMG_SIZE 22
 #define H1 0
@@ -40,13 +41,17 @@
 #define M1 13
 #define M2 18
 
+pthread_mutex_t cerrojo_isrBarrier;
+
+static pthread_t infBarrier_sim;
+static pthread_t pth_ledshow;
 
 /* GLOBAL VARIABLES */
 int enable = 0;
 int remSlices = 7;
 int infrared_sens = 0;
 int actualBlock = 0;
-int blocks[5] = {7,6,7,1};
+int blocks[5] = {7,22,6,7,22,1};
 int currentSlice = 0;
 int globalSlice = 0;
 int leds[8] = {GPIO0, GPIO1, GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7};
@@ -93,15 +98,31 @@ void delay_until(struct timespec *next_activation){
 }
 
 
-  /* TIMER FUNCTIONS */
-static void infrared_isr (void) {
-	infrared_sens = 1;
-}
+
+  /* ISR FUNCTIONS */
+
+static void infrared_isr (void) { infrared_sens = 1; }
+
+static void (*input_isr[]) (void) = {infrared_isr};
 
 
 /* INPUT FUNCTIONS */
 static int checkInfrared(fsm_t *this) {
-  return infrared_sens;
+  struct timespec t0,t1,diff = {0,0};
+  clock_gettime(CLOCK_MONOTONIC, &t0);
+  while(1) {
+    pthread_mutex_lock(&cerrojo_isrBarrier);
+    if (infrared_sens == 1) {
+      infrared_sens = 0;
+      pthread_mutex_unlock(&cerrojo_isrBarrier);
+      break;
+    }
+    pthread_mutex_unlock(&cerrojo_isrBarrier);
+  }
+  clock_gettime(CLOCK_MONOTONIC, &t1);
+  time_sub(&t0,&t1,&diff);
+  printf("wait in: %d ns\n", diff.tv_nsec);
+  return 1;
 }
 
 static int checkSlice(fsm_t *this) {
@@ -120,43 +141,51 @@ static int checkSlice(fsm_t *this) {
 /* OUTPUT FUNCTIONS */
 static void showFromPanel(int direction) {
 	struct timespec next_activation;
-	struct timespec period = {0, 1543210};
+	struct timespec period = {0, 15000};
 	clock_gettime(CLOCK_MONOTONIC, &next_activation);
 	struct timespec t0,t1,t2,diff = {0,0};
 	t0 = next_activation;
 	int slice;
 	if (direction == 0) {
-		for (slice = currentSlice; slice < IMG_SIZE; slice++){
-			clock_gettime(CLOCK_MONOTONIC, &t1);
-			int i;
-			for(i = NUMLEDS-1; i >= 0; i--){
-				digitalWrite(leds[i], (image[slice] >> i) & 0x01 );
-			}
-			clock_gettime(CLOCK_MONOTONIC, &next_activation);
-			time_add(&next_activation, &period, &next_activation);
-			clock_gettime(CLOCK_MONOTONIC, &t2);
-			time_sub(&t1,&t2,&diff);
-			printf("Time writing: %d", diff.tv_nsec);
-			delay_until(&next_activation);
-			printf("\n");
-		}
-		currentSlice = IMG_SIZE - 1;
+	  //for (slice = currentSlice; slice < IMG_SIZE; slice++){
+	  //clock_gettime(CLOCK_MONOTONIC, &t1);
+	  int i;
+	  for(i = NUMLEDS-1; i >= 0; i--){
+	    digitalWrite(leds[i], (image[currentSlice] >> i) & 0x01 );
+	  }
+	  printf("Current slice = %d", currentSlice);
+	  if (currentSlice + 1 < IMG_SIZE) {
+	  currentSlice++;
+	  }
+	  //	clock_gettime(CLOCK_MONOTONIC, &next_activation);
+	  //	time_add(&next_activation, &period, &next_activation);
+	  //	clock_gettime(CLOCK_MONOTONIC, &t2);
+	  //	time_sub(&t1,&t2,&diff);
+	  //	printf("Time writing: %d", diff.tv_nsec);
+	  //delay_until(&next_activation);
+	  //	printf("\n");
+	  //}
+	  //currentSlice = IMG_SIZE - 1;
 	} else {
-		for (slice = currentSlice; slice >= 0; slice--){
-			clock_gettime(CLOCK_MONOTONIC, &t1);
-			int i;
-			for(i = NUMLEDS-1; i >= 0; i--){
-				digitalWrite(leds[i], (image[slice] >> i) & 0x01 );
-			}
-			clock_gettime(CLOCK_MONOTONIC, &next_activation);
-			time_add(&next_activation, &period, &next_activation);
-			clock_gettime(CLOCK_MONOTONIC, &t2);
-			time_sub(&t1,&t2,&diff);
-			printf("Time writing: %d ns", diff.tv_nsec);
-			delay_until(&next_activation);
-			printf("\n");
-		}
-		currentSlice = 0;
+	  //	for (slice = currentSlice; slice >= 0; slice--){
+	  //		clock_gettime(CLOCK_MONOTONIC, &t1);
+	  int i;
+	  for(i = NUMLEDS-1; i >= 0; i--){
+	    digitalWrite(leds[i], (image[currentSlice] >> i) & 0x01 );
+	  }
+	  printf("Current slice = %d", currentSlice);
+	  if (currentSlice - 1 > 0) {
+	  currentSlice--;
+	  }
+	  //clock_gettime(CLOCK_MONOTONIC, &next_activation);
+	  //time_add(&next_activation, &period, &next_activation);
+	  //clock_gettime(CLOCK_MONOTONIC, &t2);
+	  //time_sub(&t1,&t2,&diff);
+	  //printf("Time writing: %d ns", diff.tv_nsec);
+	  //delay_until(&next_activation);
+	  //printf("\n");
+	  //}
+	  //currentSlice = 0;
 	}
 	clock_gettime(CLOCK_MONOTONIC, &t2);
 	time_sub(&t0,&t2,&diff);
@@ -198,7 +227,7 @@ static fsm_trans_t tt_ledshow[] = {
 };
 
 
-/* MONEDERO FSM TASK DEFINTION */
+/* LEDSHOW FSM TASK DEFINTION */
 static void *task_ledshow(void *arg) {
 	struct timespec next_activation;
 	struct timespec *period = task_get_period(pthread_self());
@@ -217,6 +246,22 @@ static void *task_ledshow(void *arg) {
 	}
 }
 
+/* LEDSHOW FSM TASK DEFINTION */
+static void *task_infBarrier(void *arg) {
+	struct timespec next_activation;
+	struct timespec *period = task_get_period(pthread_self());
+	clock_gettime(CLOCK_MONOTONIC, &next_activation);
+	int counter = 0;
+	printf("Periodo inf %d \n", period->tv_nsec);
+	while(counter < 1000) {
+	  pthread_mutex_lock(&cerrojo_isrBarrier);
+	  wiringPi_gen_interrupt(GPIO8);
+	  pthread_mutex_unlock(&cerrojo_isrBarrier);
+	  time_add(&next_activation, period, &next_activation);
+	  delay_until(&next_activation);
+	  counter++;
+	}
+}
 /* DRAW BASE IMAGE 2 POINTS SEPARATOR */
 static void init_image() {
   int i;
@@ -230,10 +275,10 @@ static void init_image() {
 int main(void){
 	/* Variable initialization */
 	wiringPiSetup ();
-	wiringPiISR (GPIO8, INT_EDGE_RISING, infrared_isr);
+	wiringPiISR(GPIO8, INT_EDGE_RISING, input_isr[0]);
 	init_image();
-	pthread_t pth_ledshow = task_new("ledshow", task_ledshow,PER,DLINE,1,STACKSIZE);
-
+	pth_ledshow = task_new("ledshow", task_ledshow,PER,DLINE,1,STACKSIZE);
+	infBarrier_sim = task_new("infBarrierSim", task_infBarrier,111111,111111,1,STACKSIZE);
 	
 	pthread_join(pth_ledshow, NULL);
 	

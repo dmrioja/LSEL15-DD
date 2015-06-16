@@ -44,7 +44,7 @@ task_get_deadline (pthread_t tid)
 
 pthread_t
 task_new (const char* name, void *(*f)(void *),
-          int period_ms, int deadline_ms,
+          int period_us, int deadline_us,
           int prio, int stacksize)
 {
   taskdesc_t* tdesc = &desc[ntasks++];
@@ -61,10 +61,10 @@ task_new (const char* name, void *(*f)(void *),
 
   tdesc->name = name;
   tdesc->prio = prio;
-  tdesc->period.tv_sec = period_ms / 1000;
-  tdesc->period.tv_nsec = (period_ms % 1000000) * 1000000;
-  tdesc->deadline.tv_sec = deadline_ms / 1000;
-  tdesc->deadline.tv_nsec = (deadline_ms % 1000000) * 1000000;
+  tdesc->period.tv_sec = period_us / 1000000;
+  tdesc->period.tv_nsec = (period_us) * 1000;
+  tdesc->deadline.tv_sec = deadline_us / 1000000;
+  tdesc->deadline.tv_nsec = (deadline_us) * 1000;
 
   return tdesc->tid;
 }
