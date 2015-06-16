@@ -46,6 +46,7 @@ int infrared_sens = 0;
 int currentSlice = 0;
 int leds[8] = {GPIO0, GPIO1, GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7};
 int image[IMG_SIZE];
+long maxTask = 0;
 /*LA HORA QUE QUEREMOS PINTAR 21:34 */
 int hour[4] = {2,1,3,4}; 
 
@@ -103,7 +104,7 @@ static void (*input_isr[]) (void) = {infrared_isr};
 */
 static int checkInfrared(fsm_t *this) {
 	struct timespec t0,t1,diff = {0,0};
-	clock_gettime(CLOCK_MONOTONIC, &t0);
+	//clock_gettime(CLOCK_MONOTONIC, &t0);
 	while(1) {
 		pthread_mutex_lock(&cerrojo_isrBarrier);
 		if (infrared_sens == 1) {
@@ -113,9 +114,9 @@ static int checkInfrared(fsm_t *this) {
 		}
 		pthread_mutex_unlock(&cerrojo_isrBarrier);
 	}
-	clock_gettime(CLOCK_MONOTONIC, &t1);
-	time_sub(&t0,&t1,&diff);
-	printf("Waiting for ISR: %lu ns\n", diff.tv_nsec);
+	//clock_gettime(CLOCK_MONOTONIC, &t1);
+	//time_sub(&t0,&t1,&diff);
+	//printf("Waiting for ISR: %lu ns\n", diff.tv_nsec);
 	return 1;
 }
 
@@ -150,72 +151,72 @@ static void showFromPanel(fsm_t *this) {
 	t0 = next_activation;
 	time_add(&next_activation, &beforeR, &next_activation);
 	delay_until(&next_activation);
-       	clock_gettime(CLOCK_MONOTONIC, &next_activation);
-	time_sub(&t0,&next_activation,&diff);
-	printf("INIT R: %lu \n", diff.tv_nsec);
+	//time_sub(&t0,&next_activation,&diff);
+	//printf("INIT R: %lu \n", diff.tv_nsec);
 	/* A partir de aqui se empieza a dibujar hacia la derecha, son
 	 * 22 slices con el periodo indicado arriba.
 	 */
 	for (slice = currentSlice; slice < IMG_SIZE; slice++){
-		clock_gettime(CLOCK_MONOTONIC, &t1);
+	  	//clock_gettime(CLOCK_MONOTONIC, &t1);
 		int i;
 		for(i = NUMLEDS-1; i >= 0; i--){
 			digitalWrite(leds[i], (image[slice] >> i) & 0x01 );
 		}
-		printf(" Current slice = %lu", slice);
+		//printf(" Current slice = %lu", slice);
 		
-		clock_gettime(CLOCK_MONOTONIC, &t2);
-		time_sub(&t1,&t2,&diff);
-		clock_gettime(CLOCK_MONOTONIC, &next_activation);
+		//clock_gettime(CLOCK_MONOTONIC, &t2);
+		//time_sub(&t1,&t2,&diff);
 		time_add(&next_activation, &period, &next_activation);
-		printf(" Time writing: %lu", diff.tv_nsec);
+		//printf(" Time writing: %lu", diff.tv_nsec);
 		delay_until(&next_activation);
-		printf("\n");
+		//printf("\n");
 	}
 	currentSlice = IMG_SIZE - 1;
 	/* Una vez se ha terminado de pintar hay que dejar un tiempo
 	 * para llegar hasta el final de la zona visible y volver para
 	 * volver a dibujar, esta vez hacia la izquierda */
-	clock_gettime(CLOCK_MONOTONIC, &next_activation);
-	time_sub(&t0,&next_activation,&diff);
-	printf("END R: %lu \n", diff.tv_nsec);
+	
+	//time_sub(&t0,&next_activation,&diff);
+	//printf("END R: %lu \n", diff.tv_nsec);
 	time_add(&next_activation, &fromR2L, &next_activation);
 	delay_until(&next_activation);
-	clock_gettime(CLOCK_MONOTONIC, &next_activation);
-	time_sub(&t0,&next_activation,&diff);
-	printf("INIT L: %lu \n", diff.tv_nsec);
+	//time_sub(&t0,&next_activation,&diff);
+	//printf("INIT L: %lu \n", diff.tv_nsec);
 	/* Comenzamos la escritura hacia la izquierda, en el
 	 * archivo de test se puede apreciar que por cada
 	 * ejecucion del fsm_run aparecen dos dibujos
 	 * opuestos, eso significa el recorrido a izquierdas o
 	 * derechas */
 	for (slice = currentSlice; slice >= 0; slice--){
-		clock_gettime(CLOCK_MONOTONIC, &t1);
+		//clock_gettime(CLOCK_MONOTONIC, &t1);
 		int i;
 		for(i = NUMLEDS-1; i >= 0; i--){
 			digitalWrite(leds[i], (image[slice] >> i) & 0x01 );
 		}
-		printf(" Current slice = %lu", slice);
+		//printf(" Current slice = %lu", slice);
 		
-		clock_gettime(CLOCK_MONOTONIC, &t2);
-		time_sub(&t1,&t2,&diff);
-		clock_gettime(CLOCK_MONOTONIC, &next_activation);
+		//clock_gettime(CLOCK_MONOTONIC, &t2);
+		//time_sub(&t1,&t2,&diff);
 		time_add(&next_activation, &period, &next_activation);
-		printf(" Time writing: %lu ns", diff.tv_nsec);
+		//printf(" Time writing: %lu ns", diff.tv_nsec);
 		delay_until(&next_activation);
-		printf("\n");
+		//printf("\n");
 	}
 	currentSlice = 0;
 	/* Una pintado a izquierdas, procedemos a repintar el mapa
 	 * interno de la imagen a pintar, en este caso, la hora, para
 	 * la X solo habria que sustituir la función de pintado y
 	 * dejar fija la X sin necesidad de pintar */
-	clock_gettime(CLOCK_MONOTONIC, &next_activation);
-	time_sub(&t0,&next_activation,&diff);
-	printf("END L AND IMG REDRAW: %lu \n", diff.tv_nsec);
+	
+	//time_sub(&t0,&next_activation,&diff);
+	//printf("END L AND IMG REDRAW: %lu \n", diff.tv_nsec);
 	drawPanel(this);
-	clock_gettime(CLOCK_MONOTONIC, &next_activation);
-	time_sub(&t0,&next_activation,&diff);
+	clock_gettime(CLOCK_MONOTONIC, &t1);
+	time_sub(&t0,&t1,&diff);
+	if(diff.tv_nsec > maxTask){
+		maxTask = diff.tv_nsec;
+	}
+		
 	printf("END IMG REDRAW : %lu \n", diff.tv_nsec);
 	/* Se acaba de repintar y acabamos la ejecucion, en este punto
 	 * se cumplen los plazos de tiempo ya que normalmente la
@@ -245,17 +246,17 @@ static void *task_ledshow(void *arg) {
 	printf("periodo %lu \n", period->tv_nsec);
 	drawPanel(fsm_ledshow);
 	clock_gettime(CLOCK_MONOTONIC, &next_activation);
-	while(counter < 1000) {
-		clock_gettime(CLOCK_MONOTONIC, &t0);
+	while(counter < 100) {
+		//clock_gettime(CLOCK_MONOTONIC, &t0);
 		fsm_run(fsm_ledshow);
-		clock_gettime(CLOCK_MONOTONIC, &t1);
-		time_sub(&t0,&t1,&diff);
-		printf("FSM Exec Time: %lu \n", diff.tv_nsec);
-		printf("#######################################\n");
+		//clock_gettime(CLOCK_MONOTONIC, &t1);
+		//printf("FSM Exec Time: %lu \n", diff.tv_nsec);
+		//printf("#######################################\n");
 		time_add(&next_activation, period, &next_activation);
 		delay_until(&next_activation);
 		counter++;
 	}
+	printf("MAX TIME OF EXECUTION: %lu",maxTask);
 }
 
 /* LEDSHOW FSM TASK DEFINTION */
@@ -265,7 +266,7 @@ static void *task_infBarrier(void *arg) {
 	clock_gettime(CLOCK_MONOTONIC, &next_activation);
 	int counter = 0;
 	printf("Periodo inf %lu \n", period->tv_nsec);
-	while(counter < 1000) {
+	while(counter < 120) {
 	  pthread_mutex_lock(&cerrojo_isrBarrier);
 	  wiringPi_gen_interrupt(GPIO8); /* LANZAMOS LA INTERRUPCION*/
 	  pthread_mutex_unlock(&cerrojo_isrBarrier);
@@ -274,6 +275,7 @@ static void *task_infBarrier(void *arg) {
 	  counter++;
 	}
 }
+
 /* DRAW BASE IMAGE 2 POINTS SEPARATOR */
 static void init_image() {
   int i;
@@ -298,7 +300,8 @@ int main(void){
 	pthread_join(pth_ledshow, NULL);
 	pthread_join(pth_infBarrier_sim, NULL);
 			
-	printf("**********  Fin de ejecucion  **********\n");
+	printf("\n**********  Fin de ejecucion  **********\n");
+
 	return 0;
 	
 }

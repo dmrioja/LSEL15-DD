@@ -18,7 +18,7 @@ clean:
 	$(RM) $(OBJ1) main
 
 test: all
-	./main < test/reloj.input > test/reloj.output
+	./main > test/reloj.output
 
 debug: test
 	gdb ./main < test/reloj.input > test/reloj.output

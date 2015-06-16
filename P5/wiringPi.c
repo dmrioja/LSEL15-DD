@@ -55,5 +55,5 @@ void digitalWrite(int gpio, int value) {
 	  LED = ' ';
 	}
 	
-	printf(" %c ", LED);
+	//printf(" %c ", LED);
 }
